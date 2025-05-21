@@ -41,9 +41,10 @@ header {
     margin-bottom: 40px;
 }
 
-header h1 {
+h1 {
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: #5e3a29;
+    margin-bottom: 7px;
 }
 
 header p {
@@ -64,10 +65,10 @@ section.menu {
 
 
 .card {
-    background-color: #ecf0f1;
+    background-color: #ffdbb1;
     padding: 15px;
     text-align: center;
-    border: solid black;
+    border: solid rgb(201, 162, 128);
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     width: 300px; 
@@ -84,29 +85,27 @@ section.menu {
 
 .card h3 {
     font-size: 1.4rem;
-    color: #34495e;
+    color: #000000;
     margin: 10px 0;
 }
 
 .card p {
     font-size: 1.2rem;
-    color: #e74c3c;
+    color: #000000;
 }
 
 .card button{
     border:none;
-    background-color: #ecf0f1;
+    background-color: #ffdbb1;
 }
 
 .card button img{
-    max-width: 32px;
-    max-height: 32px;
+    max-width: 35px;
+    max-height: 35px;
 }
 .card button img:hover{
-    max-width: 32px;
-    max-height: 32px;
     cursor: pointer;
-    background-color: #b1d5fa;
+    background-color:#ffffff;
 }
 
 @media (max-width: 768px) {

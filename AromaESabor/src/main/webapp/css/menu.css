@@ -10,7 +10,7 @@ body {
 
 header {
 	padding: 10px 5%;
-	background-color: #C68A4F;	
+	background-color: #b66c23;	
 }
 
 #navbar {
@@ -51,8 +51,9 @@ button {
 	padding: 10px 25px;
 	border-radius: 6px;
 	border: none;
-	background: #f5cc80;
+	background: #fcb634;
 	cursor: pointer;
+	display: flex;
 }
 
 button:hover {
@@ -62,6 +63,12 @@ button:hover {
 .botao img{
 	width: 28px;
 	height: 28px;
+}
+
+button p{
+	font-size: 19px;
+	margin-left: 5px;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 /* Responsividade */

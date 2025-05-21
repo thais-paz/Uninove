@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/carrinho.css">
+    <title>Pedido</title>
+</head>
+
+<body>
+    <header>
+        <iframe src="./menu.html" width="100%" height="150px" style="border: none;"></iframe>
+    </header>
+
+    <main>
+        <h1>Confira abaixo os itens adicionados ao carrinho para finalizar sua compra!</h1><br>
+       
+        <div>
+            <table>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Excluir</th>
+                </tr>
+                <tbody id="listaCarrinho">
+                    <!-- Os itens do carrinho serão inseridos aqui -->
+                </tbody>
+            </table>
+        </div>
+       
+        <button onclick="esvaziarCarrinho()" style="margin-top: 20px; " id="btnEsvaziar">Esvaziar Carrinho</button>
+        <br>
+        <button onclick="" id="btnEnviar">Enviar pedido</button>
+
+        <script>
+            window.onload = function () {
+                renderizarCarrinho();
+            };
+        
+            function renderizarCarrinho() {
+                const lista = JSON.parse(localStorage.getItem('carrinho')) || [];
+                const container = document.getElementById('listaCarrinho');
+        
+                container.innerHTML = '';
+        
+                if (lista.length === 0) {
+                    container.innerHTML = '<tr><td colspan="3">Carrinho vazio.</td></tr>';
+                } else {
+                    lista.forEach((item, index) => {
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `
+                            <td>${item.nome}</td>
+                            <td>${item.preco}</td>
+                            <td>
+                                <button onclick="removerItem(${index})" title="Remover item" style="border: none; background: none;">
+                                    <img src='../img/deletar-button.png' style = 'max-width: 24px' alt='Remover item do carrinho'>
+                                </button>
+                            </td>
+                        `;
+                        container.appendChild(tr);
+                    });
+                }
+            }
+        
+            function removerItem(index) {
+                const lista = JSON.parse(localStorage.getItem('carrinho')) || [];
+                lista.splice(index, 1); // Remove o item da posição específica
+                localStorage.setItem('carrinho', JSON.stringify(lista));
+                renderizarCarrinho();
+            }
+        
+            function esvaziarCarrinho() {
+                localStorage.removeItem('carrinho');
+                renderizarCarrinho();
+            }
+        </script>
+        
+
+    </main>
+
+
+</body>
+
+</html>
