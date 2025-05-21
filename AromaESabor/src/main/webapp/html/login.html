@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/login.css">
+<title>Login</title>
+</head>
+
+<body>
+	<header>
+		<iframe src="./menu.html" width="100%" height="150px"
+			style="border: none"></iframe>
+	</header>
+	<main>
+		<div id="main">
+
+			<div id="div1">
+				<div id="div2">
+					<img src="../img/login.png" alt="">
+				</div>
+			
+				<div id="div3">
+					<form id="cadastroProduto" action="#" method="post">
+
+						<label for="email">E-mail</label> 
+						<input type="text" name="email" id="email" placeholder="Digite o endereço de E-mail" class="inputComum" required>
+						
+						<label for="password">Senha</label> 
+						<input type="password" name="password" id="password" placeholder="Digite a senha para login" class="inputComum" required>
+						
+						
+						<button type="submit" name="submit" form="cadastroProduto" class="buttonSubmit">Login</button> 
+						<br>
+						<p>Não possui um cadastro? Clique <a href="/src/main/webapp/html/cadastroUsuario.html" class="buttonComum">aqui</a> para se cadastrar </p><a href="/src/main/webapp/html/cadastroUsuario.html" class="buttonComum">
+					
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script src="../js/login.js"></script>
+</body>
+</html>

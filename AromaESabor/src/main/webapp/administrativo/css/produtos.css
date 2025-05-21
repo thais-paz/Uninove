@@ -1,0 +1,13 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* __________________Responsividade________________________________ */
+@media (max-width : 768px) {
+	object, iframe, header {
+		width: 100%;
+		height: 330px;
+		display: flex;
+	}
+}
